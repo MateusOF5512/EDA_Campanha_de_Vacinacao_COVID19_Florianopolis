@@ -1,6 +1,5 @@
 # BIBLIOTECAS USADAS
 from teste_functions import *
-from teste import *
 from teste_variaveis import *
 
 st.set_page_config(page_title="Explorador de Dados Abertos", page_icon=":mag_right:",
