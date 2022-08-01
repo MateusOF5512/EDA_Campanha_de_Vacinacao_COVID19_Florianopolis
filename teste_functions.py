@@ -1,6 +1,4 @@
 # Importação de Bibliotecas:
-
-from teste import *
 from teste_variaveis import *
 import pandas as pd
 import numpy as np
