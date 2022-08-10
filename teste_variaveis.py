@@ -581,7 +581,7 @@ html_header_20="""
 <div class="card">
   <div class="card-body">
     <h2 class="card-title" style="color:#4169E1; font-family:sans-serif; text-align: center; padding: 10px 0;"
-    >2 - Características da População Vacinada</h2>
+    >2 - Características dos Pacientes Vacinados</h2>
   </div>
 </div>
 """
@@ -597,7 +597,7 @@ html_subheader_2A_10="""
                                   font-family:sans-serif; text-align: center; 
                                   padding-top: 15px; padding-right: 15px; padding-bottom: 0px; padding-left: 15px;
                                   font-size:150%;"
-                                  >2.1 - Análise do Sexo Biológico</h3>
+                                  >2.1 - Análise por Sexo Biológico</h3>
   </div>
 </div>
 """
@@ -662,7 +662,7 @@ html_card_header_2A_1_20_2="""
     <h5 class="card-title" style="background-color:#4169E1; color:#F5F5F5; font-family:sans-serif;
                                   padding-top: 10px; padding-right: 15px; padding-bottom: 1px; padding-left: 15px; 
                                   text-align: center;font-size: 100%;" 
-                                  >Sexo Biológico - Campanha de Vacinação</h5>
+                                  >Dados agrupados por Sexo Biológico</h5>
   </div>
 </div>
 """
@@ -676,7 +676,7 @@ html_card_header_2A_1_31="""
     <h5 class="card-title" style="background-color:#4169E1; color:#F5F5F5; font-family:sans-serif;
                                   padding-top: 10px; padding-right: 15px; padding-bottom: 1px; padding-left: 15px; 
                                   text-align: center;font-size: 100%;" 
-                                  >Variação de Vacinados</h5>
+                                  >Variação diária de vacinados</h5>
   </div>
 </div>
 """
@@ -689,7 +689,7 @@ html_card_header_2A_1_32="""
     <h5 class="card-title" style="background-color:#4169E1; color:#F5F5F5; font-family:sans-serif;
                                   padding-top: 10px; padding-right: 15px; padding-bottom: 1px; padding-left: 15px; 
                                   text-align: center;font-size: 100%;" 
-                                  >Campanha de Vacinação - Doses Aplicadas</h5>
+                                  >Campanha de vacinação - Doses aplicadas</h5>
   </div>
 </div>
 """
@@ -705,7 +705,7 @@ html_subheader_2B_10="""
                                   font-family:sans-serif; text-align: center; 
                                   padding-top: 15px; padding-right: 15px; padding-bottom: 0px; padding-left: 15px;
                                   font-size:150%;" 
-                                  >2.2 - Análise da Raça/Cor</h3>
+                                  >2.2 - Análise por Raça e Cor</h3>
   </div>
 </div>
 """
@@ -718,7 +718,7 @@ html_card_header_2B_2_11="""
     <h5 class="card-title" style="background-color:#4169E1; color:#F5F5F5; font-family:sans-serif;
                                   padding-top: 10px; padding-right: 15px; padding-bottom: 1px; padding-left: 15px; 
                                   text-align: center;font-size: 100%;" 
-                                  >População Residente x População Vacinada</h5>
+                                  >População residente x População vacinada</h5>
   </div>
 </div>
 """
@@ -731,7 +731,7 @@ html_card_header_2B_2_12="""
     <h5 class="card-title" style="background-color:#4169E1; color:#F5F5F5; font-family:sans-serif;
                                   padding-top: 10px; padding-right: 15px; padding-bottom: 1px; padding-left: 15px; 
                                   text-align: center;font-size: 100%;" 
-                                  >Raça/Cor - Dados Agrupados</h5>
+                                  >Dados agrupados por Raça e Cor</h5>
   </div>
 </div>
 """
@@ -744,7 +744,7 @@ html_card_header_2B_2_21="""
     <h5 class="card-title" style="background-color:#4169E1; color:#F5F5F5; font-family:sans-serif;
                                   padding-top: 10px; padding-right: 15px; padding-bottom: 1px; padding-left: 15px; 
                                   text-align: center;font-size: 100%;" 
-                                  >Raça/Cor - Dados Agrupados</h5>
+                                  >Campanha de vacinação - Doses aplicadas</h5>
   </div>
 </div>
 """
@@ -757,7 +757,7 @@ html_card_header_2B_2_22="""
     <h5 class="card-title" style="background-color:#4169E1; color:#F5F5F5; font-family:sans-serif;
                                   padding-top: 10px; padding-right: 15px; padding-bottom: 1px; padding-left: 15px; 
                                   text-align: center;font-size: 100%;" 
-                                  >Raça/Cor - Dados Agrupados</h5>
+                                  >Variação diária de vacinados</h5>
   </div>
 </div>
 """
@@ -773,7 +773,7 @@ html_subheader_2B_30="""
                                   font-family:sans-serif; text-align: center; 
                                   padding-top: 15px; padding-right: 15px; padding-bottom: 0px; padding-left: 15px;
                                   font-size:150%;" 
-                                  >2.3 - Análise da Idade</h3>
+                                  >2.3 - Análise por Faixa Etária</h3>
   </div>
 </div>
 """
@@ -786,7 +786,7 @@ html_card_header_2B_3_11="""
     <h5 class="card-title" style="background-color:#4169E1; color:#F5F5F5; font-family:sans-serif;
                                   padding-top: 10px; padding-right: 15px; padding-bottom: 1px; padding-left: 15px; 
                                   text-align: center;font-size: 100%;" 
-                                  >Quantidade de Vacinados</h5>
+                                  >População residente x População vacinada</h5>
   </div>
 </div>
 """
@@ -799,7 +799,7 @@ html_card_header_2B_3_12="""
     <h5 class="card-title" style="background-color:#4169E1; color:#F5F5F5; font-family:sans-serif;
                                   padding-top: 10px; padding-right: 15px; padding-bottom: 1px; padding-left: 15px; 
                                   text-align: center;font-size: 100%;" 
-                                  >Dados Agrupados</h5>
+                                  >Dados agrupados por Faixa Etária</h5>
   </div>
 </div>
 """
@@ -812,7 +812,7 @@ html_card_header_2B_3_21="""
     <h5 class="card-title" style="background-color:#4169E1; color:#F5F5F5; font-family:sans-serif;
                                   padding-top: 10px; padding-right: 15px; padding-bottom: 1px; padding-left: 15px; 
                                   text-align: center;font-size: 100%;" 
-                                  >Variação de Vacinados</h5>
+                                  >Variação diária de vacinados</h5>
   </div>
 </div>
 """
@@ -825,7 +825,7 @@ html_card_header_2B_3_22="""
     <h5 class="card-title" style="background-color:#4169E1; color:#F5F5F5; font-family:sans-serif;
                                   padding-top: 10px; padding-right: 15px; padding-bottom: 1px; padding-left: 15px; 
                                   text-align: center;font-size: 100%;" 
-                                  >Companha de Vacinação</h5>
+                                  >Companha de vacinação - Doses aplicadas</h5>
   </div>
 </div>
 """

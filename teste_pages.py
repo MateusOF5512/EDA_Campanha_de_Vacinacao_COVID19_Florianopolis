@@ -289,13 +289,13 @@ def campanha1():
         with col4B:
             if status_3 == 'Campanha de Vacinação':
                 st.markdown(html_card_header_1_B_23, unsafe_allow_html=True)
-                st.dataframe(data=df_AF_1, height=230)
+                st.dataframe(data=df_AF_1, height=200)
             elif status_3 == 'Caracteristicas dos Pacientes':
                 st.markdown(html_card_header_1_B_23, unsafe_allow_html=True)
-                st.dataframe(data=df_AF_2, height=230)
+                st.dataframe(data=df_AF_2, height=200)
             elif status_3 == 'Posto de Vacinação':
                 st.markdown(html_card_header_1_B_23, unsafe_allow_html=True)
-                st.dataframe(data=df_AF_3, height=230)
+                st.dataframe(data=df_AF_3, height=200)
         with col5B:
             st.write("")
 
@@ -340,7 +340,7 @@ def campanha2():
                 st.write("")
             with col4B:
                 st.markdown(html_card_header_1C13, unsafe_allow_html=True)
-                st.dataframe(data=df_BC_0, height=220)
+                st.dataframe(data=df_BC_0, height=200)
             with col5B:
                 st.write("")
         else:
@@ -499,8 +499,8 @@ def pacientes3():
         with col3A:
             st.write("")
         with col4A:
-            st.markdown(html_card_header_2B_3_12, unsafe_allow_html=True) # Dados Agrupados
-            st.dataframe(data=df_EA_2, height=200) # TABELA DE DADOS AGRUPADOS
+            st.markdown(html_card_header_2B_3_22, unsafe_allow_html=True)  # Companha de Vacinação
+            st.plotly_chart(fig_EB_2, use_container_width=True)  # GRÁFICO DE BARRA
         with col5A:
             st.write("")
 
@@ -514,8 +514,8 @@ def pacientes3():
         with col3B:
             st.write("")
         with col4B:
-            st.markdown(html_card_header_2B_3_22, unsafe_allow_html=True) # Companha de Vacinação
-            st.plotly_chart(fig_EB_2, use_container_width=True) # GRÁFICO DE BARRA
+            st.markdown(html_card_header_2B_3_12, unsafe_allow_html=True)  # Dados Agrupados
+            st.dataframe(data=df_EA_2, height=200)  # TABELA DE DADOS AGRUPADOS
         with col5B:
             st.write("")
 
