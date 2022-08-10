@@ -1,15 +1,12 @@
 # BIBLIOTECAS USADAS
-from teste_functions import *
-from teste_variaveis import *
 
-st.set_page_config(page_title="Explorador de Dados Abertos", page_icon=":mag_right:",
-                   layout="wide")
+import streamlit as st
+
+st.set_page_config(page_title="Explorador de Dados Abertos", page_icon=":mag_right:", layout="wide")
 # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 
-
-# APLICANDO FUNÇÕES PARA CARREGAR E TRATAR OS DADOS
-df_11 = get_data_11(path11)
-df_12 = get_data_12(path12)
+from teste_pages import *
+from teste_plots import *
 
 
 # APLICAÇÃO
@@ -29,11 +26,13 @@ if menu == '0 - Overview dos Dados':
     overview1()
 
 elif menu == '1 - Descrição da Campanha de Vacinação':
-    campanha1( df_11 )
-    campanha2( df_12 )
+    campanha1()
+    campanha2()
 
 elif menu == '2 - Características da População Vacinada':
-    overview1()
+    pacientes1()
+    pacientes2()
+    pacientes3()
 
 elif menu == "3 - Informações dos Postos de Vacinação":
     overview1()

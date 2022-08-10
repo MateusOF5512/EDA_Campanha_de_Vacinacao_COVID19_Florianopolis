@@ -1,12 +1,20 @@
 from PIL import Image
 
 # CAMINHO PARA OS DADOS ----------------------------------------------------------------
-path1 = "vacina_floripa_limpo.csv"
-path2 = "vacina_floripa_pre_limpeza.csv"
-
 
 path11 = "df_11ABCDEF.csv"
 path12 = "df_12GHI.csv"
+
+path13_1 = "df_id_sexo.csv"
+path13_2 = "df_sexo.csv"
+
+path14_1 = "df_id_raca.csv"
+path14_2 = "df_racor.csv"
+
+path15_1 = "df_id_faixa_etaria.csv"
+path15_2 = "df_faixa.csv"
+
+
 
 # - TOPO E RODAPÉ ------------------------------------------------------------------------
 html_title="""
@@ -149,7 +157,7 @@ html_subheader_0_20="""
     <h3 class="card-title" style="background-color:#4169E1; color:#F5F5F5; 
                                   font-family:sans-serif; text-align: center; 
                                   padding-top: 15px; padding-right: 15px; padding-bottom: 0px; padding-left: 15px;
-                                  font-size:150%;" >🔬  Extração e Tratamento dos Dados  🎲</h3>
+                                  font-size:150%;" >Extração e Tratamento dos Dados</h3>
   </div>
 </div>
 """
@@ -224,7 +232,7 @@ html_subheader_0C_1="""
     <h3 class="card-title" style="background-color:#4169E1; color:#F5F5F5; 
                                   font-family:sans-serif; text-align: center; 
                                   padding-top: 15px; padding-right: 15px; padding-bottom: 1px; padding-left: 15px;
-                                  font-size:150%;" >💉  Análise das Variáveis  👩</h3>
+                                  font-size:150%;" >Análise das Variáveis</h3>
   </div>
 </div>
 """
@@ -632,7 +640,7 @@ html_card_header_2A_1_13="""
   </div>
 </div>
 """
-html_card_header_2A_1_20="""
+html_card_header_2A_1_20_1="""
 <div class="card">
   <div class="card-body" style="border-radius: 15px 15px 0px 0px; background: #4169E1;  
                                 border:solid; border-color: black; border-width: 1px 1px 1px 1px;
@@ -641,11 +649,25 @@ html_card_header_2A_1_20="""
     <h5 class="card-title" style="background-color:#4169E1; color:#F5F5F5; font-family:sans-serif;
                                   padding-top: 10px; padding-right: 15px; padding-bottom: 1px; padding-left: 15px; 
                                   text-align: center;font-size: 100%;" 
-                                  >Sexo Biológico - Dados Agrupados</h5>
+                                  >Sexo Biológico - Características</h5>
   </div>
 </div>
 """
-html_card_header_2A_1_30="""
+html_card_header_2A_1_20_2="""
+<div class="card">
+  <div class="card-body" style="border-radius: 15px 15px 0px 0px; background: #4169E1;  
+                                border:solid; border-color: black; border-width: 1px 1px 1px 1px;
+                                padding-top: 1px; padding-right: 20px; padding-bottom: 1px; padding-left: 20px; 
+                                width: 100%; height: 40px;">
+    <h5 class="card-title" style="background-color:#4169E1; color:#F5F5F5; font-family:sans-serif;
+                                  padding-top: 10px; padding-right: 15px; padding-bottom: 1px; padding-left: 15px; 
+                                  text-align: center;font-size: 100%;" 
+                                  >Sexo Biológico - Campanha de Vacinação</h5>
+  </div>
+</div>
+"""
+
+html_card_header_2A_1_31="""
 <div class="card">
   <div class="card-body" style="border-radius: 15px 15px 0px 0px; background: #4169E1;  
                                 border:solid; border-color: black; border-width: 1px 1px 1px 1px;
@@ -658,7 +680,19 @@ html_card_header_2A_1_30="""
   </div>
 </div>
 """
-
+html_card_header_2A_1_32="""
+<div class="card">
+  <div class="card-body" style="border-radius: 15px 15px 0px 0px; background: #4169E1;  
+                                border:solid; border-color: black; border-width: 1px 1px 1px 1px;
+                                padding-top: 1px; padding-right: 20px; padding-bottom: 1px; padding-left: 20px; 
+                                width: 100%; height: 40px;">
+    <h5 class="card-title" style="background-color:#4169E1; color:#F5F5F5; font-family:sans-serif;
+                                  padding-top: 10px; padding-right: 15px; padding-bottom: 1px; padding-left: 15px; 
+                                  text-align: center;font-size: 100%;" 
+                                  >Campanha de Vacinação - Doses Aplicadas</h5>
+  </div>
+</div>
+"""
 
 ## 2.2 - Análise da Raça ou Cor:
 html_subheader_2B_10="""
