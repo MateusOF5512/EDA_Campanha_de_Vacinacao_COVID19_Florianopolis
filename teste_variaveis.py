@@ -3,7 +3,6 @@ from PIL import Image
 # CAMINHO PARA OS DADOS ----------------------------------------------------------------
 
 path11 = "df_11ABCDEF.csv"
-path11_gp = "df_11_grup.csv"
 
 path12 = "df_12GHI.csv"
 
