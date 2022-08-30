@@ -1,6 +1,7 @@
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
+import plotly.express as px
 
 from teste_variaveis import *
 
@@ -9,6 +10,9 @@ from teste_variaveis import *
 def get_data_11( path11 ):
     df_11 = pd.read_csv( path11 , sep=";")
     return df_11
+def get_data_11_gp( path11_gp ):
+    df_11_gp = pd.read_csv( path11_gp , sep=";")
+    return df_11_gp
 
 def get_data_12( path12 ):
     df_12 = pd.read_csv( path12, sep=";")
@@ -51,6 +55,7 @@ def get_data_15_2( path15_2 ):
 
 # CARREGANDO BASE DE DADOS PARA ALIMENTAÇÃO DOS GRÁFICOS
 df_11 = get_data_11(path11) # DADOS AGRUPADOS PELA TIPO DE VACINA APLICADA
+df_11_gp = get_data_11_gp(path11_gp)
 df_12 = get_data_12(path12) # DADOS AGRUPADOS PELA DIA DA VACINAÇÃO
 
 df_13_1 = get_data_13_1(path13_1) # DADOS AGRUPADOS POR SEXO (PACIENTES UNICOS)
@@ -95,7 +100,7 @@ figAA1.add_trace(go.Indicator(
             'line': {'color': "red", 'width': 4},
             'thickness': 0.75,
             'value': imun_rebanho}}))
-figAA1.update_layout(autosize=False, height=120, margin=dict(l=20, r=20, b=20, t=30),
+figAA1.update_layout(autosize=True, height=120, margin=dict(l=20, r=20, b=20, t=30),
                    paper_bgcolor="#F8F8FF", font={'size': 20})
 
 ### AA2 - GRÁFICO PIZZA - Vacinados com 1° Dose
@@ -111,7 +116,7 @@ figAA2 = go.Figure(data=[go.Pie(labels=labels,
                               marker=dict(colors=colors,
                                           line=dict(color='#000010', width=2)))])
 figAA2.update_traces(hole=.4, hoverinfo="label+percent+value")
-figAA2.update_layout(autosize=False,
+figAA2.update_layout(autosize=True,
                    height=120, margin=dict(l=20, r=20, b=20, t=30),
                    paper_bgcolor="#F8F8FF", font={'size': 20})
 
@@ -138,7 +143,7 @@ figAB1.add_trace(go.Indicator(
             'line': {'color': "red", 'width': 4},
             'thickness': 0.7,
             'value': imun_rebanho}}))
-figAB1.update_layout(autosize=False,
+figAB1.update_layout(autosize=True,
                    height=120, margin=dict(l=20, r=20, b=20, t=30),
                    paper_bgcolor="#F8F8FF", font={'size': 20})
 
@@ -156,7 +161,7 @@ figAB2 = go.Figure(data=[go.Pie(labels=labels,
                               marker=dict(colors=colors,
                                           line=dict(color=' #000010', width=2)))])
 figAB2.update_traces(hole=.4, hoverinfo="label+percent+value")
-figAB2.update_layout(autosize=False,
+figAB2.update_layout(autosize=True,
                    height=120, margin=dict(l=20, r=20, b=20, t=30),
                    paper_bgcolor="#F8F8FF", font={'size': 20})
 
@@ -170,20 +175,20 @@ figAC1.add_trace(go.Indicator(
     mode="gauge+number+delta",
     value=vacinados_adcdose,
     domain={'x': [0, 1], 'y': [0, 1]},
-    delta={'reference': imun_rebanho, 'increasing': {'color': "Purple"}},
+    delta={'reference': imun_rebanho, 'increasing': {'color': "Green"}},
     gauge={
-        'axis': {'range': [0, 520000], 'tickwidth': 2, 'tickcolor': "#D70270"},
-        'bordercolor': "#D70270",
-        'bar': {'color': "#D70270"},
+        'axis': {'range': [0, 520000], 'tickwidth': 2, 'tickcolor': "#4B0082"},
+        'bordercolor': "#4B0082",
+        'bar': {'color': "#4B0082"},
         'bgcolor': "lightgray",
         'borderwidth': 2,
         'steps': [
-            {'range': [0, imun_rebanho], 'color': "#FFC0CB"}],
+            {'range': [0, imun_rebanho], 'color': "#ecd9ec"}],
         'threshold': {
             'line': {'color': "red", 'width': 4},
             'thickness': 0.7,
             'value': imun_rebanho}}))
-figAC1.update_layout(autosize=False, height=120, margin=dict(l=20, r=20, b=20, t=30),
+figAC1.update_layout(autosize=True, height=120, margin=dict(l=20, r=20, b=20, t=30),
                    paper_bgcolor="#F8F8FF", font={'size': 20})
 
 
@@ -200,7 +205,7 @@ figAC2 = go.Figure(data=[go.Pie(labels=labels,
                               marker=dict(colors=colors,
                                           line=dict(color=' #000010', width=2)))])
 figAC2.update_traces(hole=.4, hoverinfo="label+percent+value")
-figAC2.update_layout(autosize=False,
+figAC2.update_layout(autosize=True,
                    height=120, margin=dict(l=20, r=20, b=20, t=30),
                    paper_bgcolor="#F8F8FF", font={'size': 20})
 
@@ -231,13 +236,13 @@ figAD0.add_trace(go.Bar(
 figAD0.update_layout(
     paper_bgcolor="#F8F8FF", plot_bgcolor="#F8F8FF", font={'color': "#000000", 'family': "sans-serif"},
     legend=dict(font_size=11, orientation="h", yanchor="top", y=1.20, xanchor="center", x=0.5),
-    height=220, barmode='group', margin=dict(l=1, r=1, b=1, t=1), autosize=False)
+    height=200, barmode='group', margin=dict(l=1, r=1, b=1, t=1), autosize=True)
 figAD0.update_yaxes(
     title_text="Número de Vacinados",title_font=dict(family='Sans-serif', size=12),
     tickfont=dict(family='Sans-serif', size=9), nticks=7, showgrid=True, gridwidth=0.5, gridcolor='#D3D3D3')
 
 
-### AE0 - GRÁFICO DE FUNIL - Proporção entre as Vacinas Aplicadas
+### AE1 - GRÁFICO DE FUNIL - Proporção entre as Vacinas Aplicadas
 y_PFIZER = int(df_11['TOTAL_DOSES'][2])
 y_ASTRAZENECA_FIOCRUZ = int(df_11['TOTAL_DOSES'][0])
 y_SINOVAC_BUTANTAN = int(df_11['TOTAL_DOSES'][3])
@@ -245,16 +250,50 @@ y_JANSSEN = int(df_11['TOTAL_DOSES'][1])
 values = ["Pfizer", "AstraZeneca/Fiocruz", "Sinovac/Butantan", "Janssen", ]
 y = [y_PFIZER, y_ASTRAZENECA_FIOCRUZ, y_SINOVAC_BUTANTAN, y_JANSSEN, ]
 
-figAE0 = go.Figure()
-figAE0.add_trace(go.Funnel(
+figAE1 = go.Figure()
+figAE1.add_trace(go.Funnel(
     y=values, x=y, textposition="inside", textinfo="percent total",
     marker={"color": ["#D70270", "#4169E1", "#8A2BE2", "#00FFFF", "#ADFF2F"],
             "line": {"width": [2, 2, 2, 2, 2, 2],
                      "color": ["black", "black", "black", "black", "black"]}},
     connector={"line": {"color": "black", "dash": "solid", "width": 2}}))
-figAE0.update_layout(
+figAE1.update_layout(
     paper_bgcolor="#F8F8FF", plot_bgcolor="#F8F8FF", font={'color': "#000000", 'family': "sans-serif"},
     height=200, margin=dict(l=1, r=1, b=1, t=1))
+
+### AE2 - GRÁFICO DE BARRA - Grupo Atendimento Vacinado por Dose
+
+values = ['Pfizer', 'AstraZeneca/Fiocruz', 'Sinovac/Butantan', 'Jansen']
+y_1dose = [df_11['1DOSE'][2], df_11['1DOSE'][0], df_11['1DOSE'][3], df_11['1DOSE'][1]]
+y_2dose = [df_11['2DOSE'][2], df_11['2DOSE'][0], df_11['2DOSE'][3], df_11['2DOSE'][1]]
+y_Udose = [df_11['DOSE_UNI'][2], df_11['DOSE_UNI'][0], df_11['DOSE_UNI'][3], df_11['DOSE_UNI'][1]]
+y_Adose = [df_11['DOSE_ADC'][2], df_11['DOSE_ADC'][0], df_11['DOSE_ADC'][3], df_11['DOSE_ADC'][1]]
+
+figAE2 = go.Figure()
+figAE2.add_trace(go.Bar(
+    name='Dose Adicional', x=values, y=y_Adose,
+    hovertemplate="<Aplicação: %{x} </br>N° Vacinados: %{y}",
+    textposition='none', marker_color=['#4B0082', '#4B0082', '#4B0082', '#4B0082', '#4B0082']))
+figAE2.add_trace(go.Bar(
+    name='Dose Única', x=values, y=y_Udose,
+    hovertemplate="<br>Aplicação: %{x} </br>Vacinados: %{y}",
+    textposition='none', marker_color=['#00FFFF', '#00FFFF', '#00FFFF', '#00FFFF', '#00FFFF']))
+figAE2.add_trace(go.Bar(
+    name='2° Dose', x=values, y=y_2dose,
+    hovertemplate="<br>Aplicação: %{x} </br>Vacinados: %{y}",
+    textposition='none', marker_color=['#D70270', '#D70270', '#D70270', '#D70270', '#D70270']))
+figAE2.add_trace(go.Bar(
+    name='1° Dose', x=values, y=y_1dose,
+    hovertemplate="<br>Aplicação: %{x} </br>Vacinados: %{y}",
+    textposition='none', marker_color=['#4169E1', '#4169E1', '#4169E1', '#4169E1', '#4169E1']))
+figAE2.update_layout(
+    paper_bgcolor="#F8F8FF", plot_bgcolor="#F8F8FF", font={'color': "#000000", 'family': "sans-serif"},
+    legend=dict(font_size=11, orientation="h", yanchor="top", y=1.20, xanchor="center", x=0.5),
+    height=200, barmode='stack', margin=dict(l=1, r=1, b=1, t=1), autosize=True)
+figAE2.update_yaxes(
+    title_text="Número de Vacinados",title_font=dict(family='Sans-serif', size=12),
+    tickfont=dict(family='Sans-serif', size=9), nticks=7, showgrid=True, gridwidth=0.5, gridcolor='#D3D3D3')
+
 
 ### AF0 -
 df_AF_1 = df_11
@@ -355,7 +394,7 @@ fig_CA1_1.add_trace(go.Indicator(
             'value': rebanho_masc}}))
 fig_CA1_1.update_layout(
     paper_bgcolor="#F8F8FF", font={'size': 20},
-    height=120, autosize=False, margin=dict(l=20, r=20, b=20, t=30))
+    height=120, autosize=True, margin=dict(l=20, r=20, b=20, t=30))
 
 
 ### CA_20 - GRÁFICO DE PIZZA - Proporção entre os Sexos
@@ -368,7 +407,7 @@ fig_CA_20 = go.Figure(data=[go.Pie(labels=labels1, values=[vacinados_femi, vacin
                               textinfo='percent', textfont_size=20, showlegend=False,
                               marker=dict(colors=colors1, line=dict(color='black', width=3)))])
 fig_CA_20.update_traces(hole=.4, hoverinfo="label+percent+value")
-fig_CA_20.update_layout(autosize=False, height=120, margin=dict(l=20, r=20, b=20, t=30),
+fig_CA_20.update_layout(autosize=True, height=120, margin=dict(l=20, r=20, b=20, t=30),
                         paper_bgcolor="#F8F8FF", font={'size': 20})
 
 
@@ -395,7 +434,7 @@ fig_CA_30.add_trace(go.Indicator(
             'line': {'color': "red", 'width': 4},
             'thickness': 0.7,
             'value': rebanho_femi}}))
-fig_CA_30.update_layout(autosize=False,
+fig_CA_30.update_layout(autosize=True,
                    height=120, margin=dict(b=20, t=30),
                    paper_bgcolor="#F8F8FF", font={'size': 21})
 
@@ -419,7 +458,7 @@ fig_CC_10.add_trace(go.Scatter(
 fig_CC_10.update_layout(
     paper_bgcolor="#F8F8FF", plot_bgcolor="#F8F8FF", font={'color': "#000000", 'family': "sans-serif"},
     legend=dict(font_size=12, orientation="h", yanchor="top", y=1.2, xanchor="center", x=0.5),
-    height=200, hovermode="x unified", autosize=False, margin=dict(l=1, r=1, b=1, t=1))
+    height=200, hovermode="x unified", autosize=True, margin=dict(l=1, r=1, b=1, t=1))
 fig_CC_10.update_xaxes(
     rangeslider_visible=True)
 fig_CC_10.update_yaxes(
@@ -450,7 +489,7 @@ fig_CC_20.add_trace(go.Bar(
 fig_CC_20.update_layout(
     paper_bgcolor="#F8F8FF", plot_bgcolor="#F8F8FF", font={'color': "#000000", 'family': "sans-serif"},
     legend=dict(font_size=12, orientation="h", yanchor="top", y=1.2, xanchor="center", x=0.5),
-    barmode='group', height=200, autosize=False, margin=dict(l=1, r=1, b=1, t=1))
+    barmode='group', height=200, autosize=True, margin=dict(l=1, r=1, b=1, t=1))
 fig_CC_20.update_yaxes(
     title_text="Doses Aplicadas", title_font=dict(family='Sans-serif', size=12),
     tickfont=dict(family='Sans-serif', size=9), nticks=7, showgrid=True, gridwidth=0.5, gridcolor='#D3D3D3')
@@ -487,7 +526,7 @@ fig_DA_1.add_trace(go.Bar(
     textposition='none', marker_color=['#D70270', '#D70270', '#D70270', '#D70270', '#D70270', '#D70270']))
 fig_DA_1.update_layout(
     paper_bgcolor="#F8F8FF", plot_bgcolor="#F8F8FF", font={'color': "#000000", 'family': "sans-serif"},
-    height=200, barmode='group', margin=dict(l=1, r=1, b=1, t=1), autosize=False,
+    height=200, barmode='group', margin=dict(l=1, r=1, b=1, t=1), autosize=True,
     legend=dict(font_size=12, orientation="h", yanchor="top", y=1.2, xanchor="center", x=0.5))
 fig_DA_1.update_yaxes(
     title_text="Número de Residentes/Vacinados", title_font=dict(family='Sans-serif', size=9),
@@ -523,7 +562,7 @@ fig_DB_1.add_trace(go.Bar(
 fig_DB_1.update_layout(
     paper_bgcolor="#F8F8FF", plot_bgcolor="#F8F8FF", font={'color': "#000000", 'family': "sans-serif"},
     legend=dict(font_size=12, orientation="h", yanchor="top", y=1.2, xanchor="center", x=0.5),
-    barmode='group', height=200, autosize=False, margin=dict(l=1, r=1, b=1, t=1))
+    barmode='group', height=200, autosize=True, margin=dict(l=1, r=1, b=1, t=1))
 fig_DB_1.update_yaxes(
     title_text="Doses Aplicadas", title_font=dict(family='Sans-serif', size=12),
     tickfont=dict(family='Sans-serif', size=9), nticks=7, showgrid=True, gridwidth=0.5, gridcolor='#D3D3D3')
@@ -578,7 +617,7 @@ fig_EA_1.add_trace(go.Bar(
 fig_EA_1.update_layout(
     paper_bgcolor="#F8F8FF", plot_bgcolor="#F8F8FF", font={'color': "#000000", 'family': "sans-serif"},
     legend=dict(font_size=14, orientation="h", yanchor="top", y=1.22, xanchor="center", x=0.44),
-    height=200, barmode='group', margin=dict(l=1, r=1, b=1, t=1), autosize=False)
+    height=200, barmode='group', margin=dict(l=1, r=1, b=1, t=1), autosize=True)
 fig_EA_1.update_yaxes(
     title_text="Número de Residentes/Vacinados", title_font=dict(family='Sans-serif', size=12),
     tickfont=dict(family='Sans-serif', size=9), nticks=7, showgrid=True, gridwidth=0.5, gridcolor='#D3D3D3')
@@ -643,7 +682,7 @@ fig_EB_2.add_trace(go.Bar(
 fig_EB_2.update_layout(
     paper_bgcolor="#F8F8FF", plot_bgcolor="#F8F8FF", font={'color': "#000000", 'family': "sans-serif"},
     legend=dict(font_size=12, orientation="h", yanchor="top", y=1.15, xanchor="center", x=0.5),
-    barmode='group', height=200, autosize=False, margin=dict(l=1, r=1, b=1, t=1))
+    barmode='group', height=200, autosize=True, margin=dict(l=1, r=1, b=1, t=1))
 fig_EB_2.update_yaxes(
     title_text="Doses Aplicadas", title_font=dict(family='Sans-serif', size=12),
     tickfont=dict(family='Sans-serif', size=9), nticks=7, showgrid=True, gridwidth=0.5, gridcolor='#D3D3D3')

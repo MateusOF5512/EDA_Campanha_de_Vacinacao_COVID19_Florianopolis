@@ -3,6 +3,8 @@ from PIL import Image
 # CAMINHO PARA OS DADOS ----------------------------------------------------------------
 
 path11 = "df_11ABCDEF.csv"
+path11_gp = "df_11_grup.csv"
+
 path12 = "df_12GHI.csv"
 
 path13_1 = "df_id_sexo.csv"
@@ -19,17 +21,9 @@ path15_2 = "df_faixa.csv"
 # - TOPO E RODAPÉ ------------------------------------------------------------------------
 html_title="""
 <h1 style="font-size:300%; color:#4169e1; font-family:sans-serif;
-            text-align:center; ">Explorador de Dados Abertos</h1>
+            text-align:center; ">Análise Exploratória de Dados Abertos</h1>
 <h3 style="font-size:180%; color:#4169e1;font-family:sans-serif;
             text-align:center; ">Campanha de Vacinação Contra COVID-19 - Florianópolis-SC</h3>
-<hr style= "display: block;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: inset;
-  border-width: 1.5px;">
-  <p style="color:Gainsboro; text-align: center;">Última atualização: 24/07/2022</p>
 """
 html_rodape="""
 <hr style= "display: block;
@@ -39,7 +33,7 @@ html_rodape="""
   margin-right: auto;
   border-style: inset;
   border-width: 1.5px;">
-  <p style="color:Gainsboro; text-align: center;">By: mateus7ortiz@gmail.com</p>
+  <p style="color:Gainsboro; text-align: center;">Última atualização: 24/07/2022</p>
 """
 
 # - OVERVIEW -----------------------------------------------------------------------------
@@ -496,6 +490,21 @@ html_card_header_1_B_23="""
   </div>
 </div>
 """
+
+html_card_header_1_B_24="""
+<div class="card">
+  <div class="card-body" style="border-radius: 15px 15px 0px 0px; background: #4169E1;  
+                                border:solid; border-color: black; border-width: 1px 1px 1px 1px;
+                                padding-top: 1px; padding-right: 20px; padding-bottom: 1px; padding-left: 20px; 
+                                width: 100%; height: 40px;">
+    <h5 class="card-title" style="background-color:#4169E1; color:#F5F5F5; font-family:sans-serif;
+                                  padding-top: 10px; padding-right: 15px; padding-bottom: 1px; padding-left: 15px; 
+                                  text-align: center;font-size: 100%;" 
+                                  >Doses aplicadas por tipo de vacina</h5>
+  </div>
+</div>
+"""
+
 ## 1.2 - Variação das Doses & Vacinas Aplicadas:
 html_subheader_12="""
 <div class="card">

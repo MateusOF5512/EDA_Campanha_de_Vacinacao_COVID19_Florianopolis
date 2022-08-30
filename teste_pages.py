@@ -197,6 +197,9 @@ def campanha1():
     st.markdown("""---""")
     st.text("")
 
+    st.markdown(html_subheader_11, unsafe_allow_html=True) # 1.1 - Número de Doses & Vacinas Aplicadas
+    st.text("")
+
     with st.expander('⚙ Configurar visualização de gráficos e tabelas 👈'):
         st.markdown("""---""")
         st.markdown(html_expanderheader_1_10, unsafe_allow_html=True) # Selecione o tipo da sua análise:
@@ -223,10 +226,6 @@ def campanha1():
 
         st.markdown("""---""")
 
-    st.text("")
-
-    st.markdown(html_subheader_11, unsafe_allow_html=True) # 1.1 - Número de Doses & Vacinas Aplicadas
-    st.text("")
     st.text("")
 
 ### CAMPANHA 1 - LINHA A -> COM FILTRO --------------------------------------------------------
@@ -281,12 +280,24 @@ def campanha1():
         with col2B:
             st.markdown(html_card_header_1_B_21, unsafe_allow_html=True) # Quantidade de Vacinas Aplicadas por Dose
             st.plotly_chart(figAD0, use_container_width=True) # GRÁFICO DE BARRA HORIZONTAL
-            st.write("")
-            st.markdown(html_card_header_1_B_22, unsafe_allow_html=True) # Proporção entre as Vacinas Aplicadas
-            st.plotly_chart(figAE0, use_container_width=True) # GRÁFICO DE FUNIL
         with col3B:
             st.write("")
         with col4B:
+            st.markdown(html_card_header_1_B_24, unsafe_allow_html=True)  # Grupo Atendimento Vacinado por Dose
+            st.plotly_chart(figAE2, use_container_width=True)  # GRÁFICO DE BARRA
+        with col5B:
+            st.write("")
+
+    with st.container():
+        col1C, col2C, col3C, col4C, col5C = st.columns([50, 520, 60, 520, 50])
+        with col1C:
+            st.write("")
+        with col2C:
+            st.markdown(html_card_header_1_B_22, unsafe_allow_html=True) # Proporção entre as Vacinas Aplicadas
+            st.plotly_chart(figAE1, use_container_width=True) # GRÁFICO DE FUNIL
+        with col3C:
+            st.write("")
+        with col4C:
             if status_3 == 'Campanha de Vacinação':
                 st.markdown(html_card_header_1_B_23, unsafe_allow_html=True)
                 st.dataframe(data=df_AF_1, height=200)
@@ -296,8 +307,9 @@ def campanha1():
             elif status_3 == 'Posto de Vacinação':
                 st.markdown(html_card_header_1_B_23, unsafe_allow_html=True)
                 st.dataframe(data=df_AF_3, height=200)
-        with col5B:
+        with col5C:
             st.write("")
+
 
     st.write("")
     st.write("")
@@ -331,17 +343,27 @@ def campanha2():
             with col1B:
                 st.write("")
             with col2B:
-                st.markdown(html_card_header_1C11, unsafe_allow_html=True) # Variação diária de DOSES aplicadas
-                st.plotly_chart(figBA0, use_container_width=True) # GRÁFICO DE LINHA AREA (4)
-                st.write("")
-                st.markdown(html_card_header_1C12, unsafe_allow_html=True)
-                st.plotly_chart(figBB0, use_container_width=True)
+                st.markdown(html_card_header_1C11, unsafe_allow_html=True)  # Variação diária de DOSES aplicadas
+                st.plotly_chart(figBA0, use_container_width=True)  # GRÁFICO DE LINHA AREA (4)
             with col3B:
                 st.write("")
             with col4B:
-                st.markdown(html_card_header_1C13, unsafe_allow_html=True)
-                st.dataframe(data=df_BC_0, height=200)
+                st.markdown(html_card_header_1C12, unsafe_allow_html=True)
+                st.plotly_chart(figBB0, use_container_width=True)
             with col5B:
+                st.write("")
+        else:
+            st.write("Ainda nada")
+
+    with st.container():
+        if status1 == 'Dia':
+            col1C, col2C, col3C, = st.columns([50, 1100, 50])
+            with col1C:
+                st.write("")
+            with col2C:
+                st.markdown(html_card_header_1C13, unsafe_allow_html=True)
+                st.dataframe(data=df_BC_0, height=170)
+            with col3C:
                 st.write("")
         else:
             st.write("Ainda nada")
@@ -349,8 +371,7 @@ def campanha2():
     st.write("")
     st.write("")
     st.write("")
-    st.markdown("""---""")
-    st.write("")
+
     return None
 
 
