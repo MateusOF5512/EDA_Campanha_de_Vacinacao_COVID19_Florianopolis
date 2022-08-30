@@ -10,9 +10,6 @@ from teste_variaveis import *
 def get_data_11( path11 ):
     df_11 = pd.read_csv( path11 , sep=";")
     return df_11
-def get_data_11_gp( path11_gp ):
-    df_11_gp = pd.read_csv( path11_gp , sep=";")
-    return df_11_gp
 
 def get_data_12( path12 ):
     df_12 = pd.read_csv( path12, sep=";")
@@ -55,7 +52,6 @@ def get_data_15_2( path15_2 ):
 
 # CARREGANDO BASE DE DADOS PARA ALIMENTAÇÃO DOS GRÁFICOS
 df_11 = get_data_11(path11) # DADOS AGRUPADOS PELA TIPO DE VACINA APLICADA
-df_11_gp = get_data_11_gp(path11_gp)
 df_12 = get_data_12(path12) # DADOS AGRUPADOS PELA DIA DA VACINAÇÃO
 
 df_13_1 = get_data_13_1(path13_1) # DADOS AGRUPADOS POR SEXO (PACIENTES UNICOS)
