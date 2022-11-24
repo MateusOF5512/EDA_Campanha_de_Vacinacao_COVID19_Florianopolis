@@ -19,7 +19,7 @@ path15_2 = "df_faixa.csv"
 
 # - TOPO E RODAPÉ ------------------------------------------------------------------------
 html_title="""
-<h1 style="font-size:250%; color:#4169e1; font-family:sans-serif;
+<h1 style="font-size:300%; color:#4169e1; font-family:sans-serif;
             text-align:center; ">Campanha de Vacinação Contra COVID-19 em Florianópolis - SC</h1>
 """
 html_rodape="""
