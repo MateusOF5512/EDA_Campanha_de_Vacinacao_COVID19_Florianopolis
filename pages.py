@@ -307,7 +307,7 @@ def campanha1():
             if status_3 == 'Campanha de Vacinação':
                 st.markdown(html_card_header_1_B_23, unsafe_allow_html=True)
 
-                df_AF_1_drop = df_AF_1.drop(df_AF_1.columns[[0]], axis=1)
+                df_AF_1_drop = df_AF_1.drop(df_AF_1.columns[[0, 2]], axis=1)
                 tabela_aggrid(df=df_AF_1_drop, enabled=False, height=200)
             elif status_3 == 'Caracteristicas dos Pacientes':
                 st.markdown(html_card_header_1_B_23, unsafe_allow_html=True)
