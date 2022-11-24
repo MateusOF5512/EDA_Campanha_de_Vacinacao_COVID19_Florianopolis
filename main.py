@@ -6,8 +6,10 @@ st.set_page_config(page_title="App Web", page_icon=":mag_right:", layout="wide")
 
 hide_streamlit_style = """
             <style>
-            #footer {visibility: hidden;}
-            </style> """
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style> 
+            """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 from pages import *
