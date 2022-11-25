@@ -696,12 +696,14 @@ fig_EB_2.update_yaxes(
 
 def tabela_aggrid(df, enabled, height):
     gd = GridOptionsBuilder.from_dataframe(df)
+
     gd.configure_pagination(enabled=enabled)
-    gd.configure_side_bar()
-    gd.configure_default_column(groupable=True, value=True, enableRowGroup=True,
-                                aggFunc="sum", editable=True)
     #gd.configure_selection(use_checkbox=True, selection_mode='multiple')
-    gridoptions = gd.build()
-    df = AgGrid(df, gridOptions=gridoptions, enable_enterprise_modules=False, height=height, width='100%')
+    gd.configure_default_column(groupable=True, value=True, enableRowGroup=True, aggFunc="sum", editable=True)
+    gd.configure_side_bar()
+    gridOptions = gd.build()
+
+    df = AgGrid(df, gridOptions=gridOptions, enable_enterprise_modules=True,
+                height=height, width='100%', editable=True)
 
     return df
