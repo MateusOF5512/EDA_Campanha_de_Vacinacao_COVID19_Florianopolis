@@ -17,7 +17,7 @@ from plots import *
 # APLICAÇÃO
 topo()
 
-tab1, tab2, tab3 = st.tabs(["💉 Campanha de Vacinação", "😎 Pacientes Vacinados", "🎲 Overview dos Dados"])
+tab1, tab2, tab3 = st.tabs(["💉 CAMPANHA DE VACINAÇÃO", "😎 PACIENTES VACINADOS", "🎲 OVERVIEW DOS DADOS"])
 
 with tab1:
     campanha1()
